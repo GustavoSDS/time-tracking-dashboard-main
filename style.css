@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+:root {
+    /* ## Layout */
+    /* - Mobile: 375px
+    - Desktop: 1440px */
+
+    /* ## Colors */
+    /* ### Primary */
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red-work: hsl(15, 100%, 70%);
+    --Soft-blue-play: hsl(195, 74%, 62%);
+    --Light-red-study: hsl(348, 100%, 68%);
+    --Lime-green-exercise: hsl(145, 58%, 55%);
+    --Violet-social: hsl(264, 64%, 52%);
+    --Soft-orange-self-care: hsl(43, 84%, 65%);
+
+    /* ### Neutral */
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Very-desaturated-blue: hsl(236, 41%, 34%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+
+    /*  ## Typography
+    ### Body Copy */
+
+    --Font-size: 18px;
+    /* (card titles e.g. Work, Play) */
+
+    /* ### Font */
+
+    --Family-font: 'Rubik';
+    --Weight-font-300: 300;
+    --Weight-font-400: 400;
+    --Weight-font-500: 500;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1400px;
+    height: 768px;
+    margin: auto;
+    font-family: var(--Family-font), sans-serif;
+    background-color: var(--Very-dark-blue);
+}
+
+.container {
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 1109px;
+    height: 519px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px;
+    justify-content: center;
+}
+
+.perfil {
+    width: 254px;
+    height: 516px;
+    background-color: var(--Dark-blue);
+    grid-row: 1/4;
+    border-radius: 17px;
+}
+
+.avatar {
+    width: 100%;
+    height: 353px;
+    background-color: var(--Blue);
+    border-radius: 17px;
+}
+
+img {
+    width: 85px;
+    height: 85px;
+    margin-top: 34px;
+    margin-left: 30px;
+
+}
+
+h1 {
+    font-size: 15pt;
+    font-weight: var(--Weight-font-300);
+    margin-top: 38px;
+    margin-left: 32px;
+    color: var(--Pale-Blue);
+}
+
+h2 {
+    font-size: 32pt;
+    font-weight: var(--Weight-font-300);
+    letter-spacing: 2px;
+    margin-left: 32px;
+    color: white;
+}
+
+.options {
+    margin-left: 33px;
+    margin-top: 30px;
+}
+
+.options h3 {
+    width: max-content;
+    font-weight: var(--Weight-font-300);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.color-white{
+    color:white;
+}
+.color-pale-blue{
+    color: var(--Pale-Blue);
+}
+.color-pale-blue:hover{
+    color: white;
+}
+
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care {
+    width: 256px;
+    height: 243px;
+    border-radius: 17px;
+}
+.hidden{
+    display: none;
+}
+
+.activity {
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -10px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.work {
+    background-color: var(--Light-red-work);
+    background-image: url('./images/icon-work.svg');
+}
+
+.play {
+    background-color: var(--Soft-blue-play);
+    background-image: url('./images/icon-play.svg');
+}
+
+.study {
+    background-color: var(--Light-red-study);
+    background-image: url('./images/icon-study.svg');
+}
+
+.exercise {
+    background-color: var(--Lime-green-exercise);
+    background-image: url('./images/icon-exercise.svg');
+}
+
+.social {
+    background-color: var(--Violet-social);
+    background-image: url('./images/icon-social.svg');
+}
+
+.self-care {
+    background-color: var(--Soft-orange-self-care);
+    background-image: url('./images/icon-self-care.svg');
+}
+
+.activity-details {
+    width: 100%;
+    height: 198px;
+    border-radius: 17px;
+    background-color: var(--Dark-blue);
+}
+
+.activity-details:hover {
+    background-color: var(--Very-desaturated-blue);
+    cursor: pointer;
+}
+
+h4 {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    font-weight: var(--Weight-font-500);
+    color: white;
+    margin-top: 30px;
+    margin-left: 28px;
+}
+
+.detail-header h4 img {
+    position: absolute;
+    left: 70px;
+    top: -25px;
+    width: 30px;
+    height: 8px;
+    margin-left: 100px;
+}
+
+.detail-header h4 span {
+    background-image: url('./images/icon-ellipsis.svg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 30px;
+    position: absolute;
+    left: 50px;
+    top: 5px;
+    width: 40px;
+    height: 10px;
+    margin-left: 100px;
+    z-index: 100;
+}
+
+.detail-header h4 span:hover {
+    cursor: pointer;
+    background-image: url('./images/icon-ellipsis-white.svg');
+}
+
+h5 {
+    font-size: 58px;
+    color: white;
+    font-weight: var(--Weight-font-300);
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.dates div span {
+    color: var(--Pale-Blue);
+    font-size: 15px;
+    margin-left: 30px;
+}
