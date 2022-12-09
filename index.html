@@ -1,160 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
-  
+  <link rel="stylesheet" href="./css/styles.css">
+
   <title>Frontend Mentor | Time tracking dashboard</title>
 
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="perfil">
-      <div class="avatar">
-        <img src="./images/image-jeremy.png" alt="">
-        <h1>Report for</h1>
-        <h2>Jeremy Robson</h2>
-      </div>
-      
-      <div class="options">
-        <h3 id="page" class="color-pale-blue"> Page</h3>
-        <h3 id="weekly" class="color-white">Weekly</h3>
-        <h3 id="monthly" class="color-pale-blue">Monthly</h3>
-      </div>
-    </div>
+  <main class="main-container">
+    <section class="first-section">
+      <div class="main-card">
+        <div class="main-card__user">
+          <img class="main-card__image" src="./images/image-jeremy.png" alt="user image">
+          <div>
+            <p class="main-card__title">Report for</p>
+            <p class="main-card__name">Jeremy Robson</p>
+          </div>
+        </div>
 
-    <div class="work activity">
-      <div class="activity-details details-work">
-        <div class="detail-header">
-          <h4 class="title">Work <span></span></h4>
-        </div>
-        <div class="dates">
-          <div class="day1 hidden">
-            <h5>5hrs <!-- daily --></h5>
-            <span> Last Week - 7hrs </span> <!-- daily -->
-          </div>
-          <div class="week1">
-            <h5>32hrs <!-- weekly --></h5>
-            <span> Last Week - 36hrs</span> <!-- weekly -->
-          </div>
-          <div class="year1 hidden">
-            <h5>103hrs <!-- monthly --></h5>
-            <span>Last Week - 128hrs <!-- monthly --></span>
-          </div>
+        <div class="main-card__dates">
+          <p id="daily" class="main-card__frequency">Daily</p>
+          <p id="weekly" class="main-card__frequency">Weekly</p>
+          <p id="monthly" class="main-card__frequency">Monthly</p>
         </div>
       </div>
-    </div>
-    <div class="play activity">
-      <div class="activity-details">
-        <div class="detail-header">
-          <h4 class="title">Play <span></span></h4>
-        </div>
-        <div class="dates">
-          <div class="day2 hidden">
-            <h5>1hr <!-- daily --></h5>
-            <span> Last Week - 2hrs <!-- daily --></span>
-          </div>
-          <div class="week2">
-            <h5>10hrs <!-- weekly --></h5>
-            <span> Last Week - 8hrs <!-- weekly --></span>
-          </div>
-          <div class="year2 hidden">
-            <h5>23hrs <!-- monthly --></h5>
-            <span> Last Week - 29hrs <!-- monthly --></span>
-          </div>
-        </div>
-      </div>  
-    </div>
-    <div class="study activity">
-      <div class="activity-details">
-        <div class="detail-header">
-          <h4 class="title">Study <span></span></h4>
-        </div>
-        <div class="dates">
-          <div class="day3 hidden">
-            <h5>0hrs <!-- daily --></h5>
-            <span> Last Week - 1hr <!-- daily --></span>
-          </div>
-          <div class="week3">
-            <h5>4hrs <!-- weekly --></h5>
-            <span> Last Week - 7hrs <!-- weekly --></span>
-          </div>
-          <div class="year3 hidden">
-            <h5>13hrs <!-- monthly --></h5>
-            <span> Last Week - 19hrs <!-- monthly --></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="exercise activity">
-      <div class="activity-details">
-        <div class="detail-header">
-          <h4 class="title">Exercise <span></span></h4>
-        </div>
-        <div class="dates">
-          <div class="day4 hidden">
-            <h5>1hr <!-- daily --></h5>
-            <span> Last Week - 1hr <!-- daily --></span>
-          </div>
-          <div class="week4">
-            <h5>4hrs <!-- weekly --></h5>
-            <span> Last Week - 5hrs <!-- weekly --></span>
-          </div>
-          <div class="year4 hidden">
-            <h5>11hrs <!-- monthly --></h5>
-            <span> Last Week - 18hrs <!-- monthly --></span>
-          </div>
-        </div>      
-      </div>
-    </div>
-    <div class="social activity">
-      <div class="activity-details">
-        <div class="detail-header">
-          <h4 class="title">Social <span></span></h4>
-        </div>
-        <div class="dates">
-          <div class="day5 hidden">
-            <h5>1hr <!-- daily --></h5>
-            <span> Last Week - 3hr <!-- daily --></span>
-          </div>
-          <div class="week5">
-            <h5>5hrs <!-- weekly --></h5>
-            <span> Last Week - 10hrs <!-- weekly --></span>
-          </div>
-          <div class="year5 hidden">
-            <h5>21hrs <!-- monthly --></h5>
-            <span> Last Week - 23hrs <!-- monthly --></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="self-care activity">
-      <div class="activity-details">
-        <div class="detail-header">
-          <h4 class="title">Self Care <span></span></h4>
-        </div>
-        <div class="dates">
-          <div class="day6 hidden">
-            <h5>0hr <!-- daily --></h5>
-            <span> Last Week - 1hr <!-- daily --></span>
-          </div>
-          <div class="week6">
-            <h5>2hrs <!-- weekly --></h5>
-            <span> Last Week - 2hrs <!-- weekly --></span>
-          </div>
-          <div class="year6 hidden">
-            <h5>7hrs <!-- monthly --></h5>
-            <span> Last Week - 11hrs <!-- monthly --></span>
-          </div>
-        </div>      
-      </div>
-    </div>
-  </div>
 
-  <script src="main.js"></script>
+    </section>
+
+    <section class="second-section">
+
+    </section>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Gustavo S. Dos Santos</a>.
+    </p>
+  </footer>
+  <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
